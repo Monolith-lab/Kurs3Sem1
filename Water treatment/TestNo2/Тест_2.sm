@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Solver" version="1.3.0.9126"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="120">
+    <identity>
+      <id>b90d0aa8-af14-4f96-92c7-0c0970a82c13</id>
+      <revision>6</revision>
+    </identity>
+    <metadata lang="rus">
+      <author>Александр Рыльский (LeilPi)</author>
+    </metadata>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>true</significantDigitsMode>
+      <mixedNumbers>false</mixedNumbers>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>3</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="true" viewMode="0" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true" hideElementsHighlightings="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Core" version="1.73.9126.0" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.73.9126.0" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="TextRegion" version="1.73.9126.0" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="0" top="0" width="750" height="143" color="#000000" fontSize="10">
+      <text lang="rus" width="750" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>
+            <span style="font-weight: bold;">2.1.1. РАСЧЕТ</span>
+            <br />
+            <span style="font-weight: bold;">ПРОИЗВОДИТЕЛЬНОСТИ ВПУ</span>
+            <br />
+            <span style="font-weight: bold;">ДЛЯ ГРЭС</span>
+            <br />Топливо: газ<br />© кафедра ТОТ НИУ «МЭИ», 2025 7 Исходные данные<br />• Количество энергоблоков: 6 шт.<br />• Паропроизводительность котла одного<br />блока: 1490 т/ч.<br />• Основное и резервное топливо - газ.</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="153" width="46" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">N</e>
+          <e type="operand">6</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="171" width="161" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">D</e>
+          <e type="operand">N</e>
+          <e type="operand">714</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">4284</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="207" width="168" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Q.ВПУ</e>
+          <e type="operand">3</e>
+          <e type="operand" style="unit">%</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">D</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">128.5</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="252" width="436" height="143" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>
+            <span style="font-weight: bold;">2.1.2. РАСЧЕТ</span>
+            <br />
+            <span style="font-weight: bold;">ПРОИЗВОДИТЕЛЬНОСТИ ВПУ</span>
+            <br />
+            <span style="font-weight: bold;">ДЛЯ ГРЭС</span>
+            <br />Топливо: газ и мазут © кафедра ТОТ НИУ «МЭИ», 2025 11<br />Исходные данные<br />• Количество энергоблоков: 6 шт.<br />• Паропроизводительность котла одного блока: 1490 т/ч.<br />• Основное топливо - газ. Резервное топливо - мазут.<br />• Расход мазута на один энергоблок Bмазут: 48 т/ч.</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="405" width="46" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">N</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="432" width="169" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">D</e>
+          <e type="operand">N</e>
+          <e type="operand">1985</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">5955</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="477" width="181" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Q.ВПУ_3</e>
+          <e type="operand">D</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">%</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">178.6</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="522" width="350" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Суммарный расход мазута на все энергоблоки:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="558" width="160" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">B.м</e>
+          <e type="operand">N</e>
+          <e type="operand">109</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">327</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="603" width="225" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Q.ВПУ_мвзут</e>
+          <e type="operand">B.м</e>
+          <e type="operand">0.15</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">49.05</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="639" width="272" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Расчетная производительность ВПУ:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="675" width="255" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Q.ВПУ</e>
+          <e type="operand">Q.ВПУ_мвзут</e>
+          <e type="operand">Q.ВПУ_3</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">227.7</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="720" width="745" height="188" color="#000000" fontSize="10">
+      <text lang="rus" width="745" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>
+            <span style="font-weight: bold;">2.1.3. РАСЧЕТ</span>
+            <br />
+            <span style="font-weight: bold;">ПРОИЗВОДИТЕЛЬНОСТИ ВПУ ДЛЯ</span>
+            <br />
+            <span style="font-weight: bold;">ТЭЦ С ПРОИЗВОДСТВЕННЫМ</span>
+            <br />
+            <span style="font-weight: bold;">ОТБОРОМ ПАРА</span>
+            <br />Топливо: газ © кафедра ТОТ НИУ «МЭИ», 2025 16<br />Исходные данные<br />• Суммарная паропроизводительность всех котлов: 1670 т/ч.<br />• Продувка котлов: 1,0%.<br />• Все котлы - барабанные.<br />• Основное и резервное топливо - газ.<br />• Отдача пара на производство: 355 т/ч.<br />• Возврат конденсата с производства: 76%.</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="945" width="220" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Q.ВПУ_3</e>
+          <e type="operand">3947</e>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">%</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">118.4</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="990" width="260" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Q.ВПУ_продувка</e>
+          <e type="operand">1</e>
+          <e type="operand" style="unit">%</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">3947</e>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">39.47</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1089" width="364" height="45" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Q.возвр.конд</e>
+          <e type="operand">1.25</e>
+          <e type="operand">216</e>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">216</e>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">72</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">%</e>
+          <e type="operator" args="2">*</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">75.6</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1143" width="272" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Расчетная производительность ВПУ:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1179" width="373" height="41" color="#000000" fontSize="10">
+      <math decimalPlaces="14">
+        <input>
+          <e type="operand">Q.ВПУ</e>
+          <e type="operand">Q.ВПУ_3</e>
+          <e type="operand">Q.ВПУ_продувка</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">Q.возвр.конд</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">233.48</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1233" width="733" height="248" color="#000000" fontSize="10">
+      <text lang="rus" width="733" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>
+            <span style="font-weight: bold;">2.1.4. РАСЧЕТ</span>
+            <br />
+            <span style="font-weight: bold;">ПРОИЗВОДИТЕЛЬНОСТИ ВПУ ДЛЯ</span>
+            <br />
+            <span style="font-weight: bold;">ПОДПИТКИ ОСНОВНОГО ЦИКЛА</span>
+            <br />
+            <span style="font-weight: bold;">ТЭЦ И ТЕПЛОСЕТИ</span>
+            <br />
+            <br />Исходные данные<br />• Количество энергоблоков: 6 шт.<br />• Паропроизводительность котла одного<br />блока: 1710 т/ч.<br />• Тепловая мощность отборов одного блока:<br />599 Гкал/ч.<br />• Продувка котла: 1,3%.<br />• Все котлы - барабанные.<br />• Основное топливо - газ, резервное - мазут.<br />• Расход мазута на один энергоблок: 115 т/ч.<br /></p>
+        </content>
+      </text>
+    </region>
+    <region left="396" top="1350" width="230" height="33" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand" style="unit">Гкал</e>
+          <e type="operand" style="unit">cal</e>
+          <e type="operand">10</e>
+          <e type="operand">9</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">4.187</e>
+          <e type="operand">10</e>
+          <e type="operand">9</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">J</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1485" width="159" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">D</e>
+          <e type="operand">2</e>
+          <e type="operand">607</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">1214</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1521" width="776" height="38" color="#000000" fontSize="10">
+      <text lang="rus" width="776" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Расчетная производительность ВПУ (3% от суммарной производительности) на восполнение станционных потерь:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1566" width="181" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Q.ВПУ_3</e>
+          <e type="operand">3</e>
+          <e type="operand" style="unit">%</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">D</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">36.42</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1611" width="626" height="23" color="#000000" fontSize="10">
+      <text lang="rus" width="626" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Расчетная производительность ВПУ на восполнение потерь с продувкой котла:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1638" width="242" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Q.ВПУ_продувка</e>
+          <e type="operand">1.1</e>
+          <e type="operand" style="unit">%</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">D</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">13.35</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1692" width="350" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Суммарный расход мазута на все энергоблоки:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1728" width="135" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">B</e>
+          <e type="operand">2</e>
+          <e type="operand">41</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">82</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1764" width="752" height="23" color="#000000" fontSize="10">
+      <text lang="rus" width="752" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Расчетная производительность ВПУ для восполнения потерь пара на разогревмазута:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1800" width="185" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Q.ВПУ_м</e>
+          <e type="operand">B</e>
+          <e type="operand">0.15</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">12.3</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1836" width="272" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Расчетная производительность ВПУ:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1872" width="341" height="41" color="#000000" fontSize="10">
+      <math decimalPlaces="13">
+        <input>
+          <e type="operand">Q.ТЭц</e>
+          <e type="operand">Q.ВПУ_3</e>
+          <e type="operand">Q.ВПУ_м</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">Q.ВПУ_продувка</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">t</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">62.074</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1926" width="218" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Q.sum</e>
+          <e type="operand">2</e>
+          <e type="operand">212</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">Гкал</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">Гкал</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">424</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1971" width="265" height="50" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Q.sum</e>
+          <e type="operand">424</e>
+          <e type="operand" style="unit">Гкал</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">50</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand" style="unit">hr</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">Гкал</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">m</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">^</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">21200</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="2034" width="233" height="39" color="#000000" fontSize="10">
+      <math decimalPlaces="13">
+        <input>
+          <e type="operand">Q.теплосеть</e>
+          <e type="operand">Q.sum</e>
+          <e type="operand">0.5</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">%</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">106</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+  </regions>
+</worksheet>
