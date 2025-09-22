@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Solver" version="1.3.0.9126"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="120">
+    <identity>
+      <id>5f5fc34d-b161-4fcd-980f-14f77650c642</id>
+      <revision>5</revision>
+    </identity>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>true</significantDigitsMode>
+      <mixedNumbers>false</mixedNumbers>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>3</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="true" viewMode="0" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true" hideElementsHighlightings="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Core" version="1.73.9126.0" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.73.9126.0" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="SpecialFunctions" version="1.73.9126.0" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="TextRegion" version="1.73.9126.0" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="0" top="0" width="741" height="40" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Определить высоту состояние солнца и его азимутный угол а так же продолжительность светового дня в точке 40° северной широты в 9:00 15го августа \[REGION[78aa2dbd44e644e18982e4a36ad3d642]]\</p>
+        </content>
+        <regions>
+          <region id="78aa2dbd44e644e18982e4a36ad3d642" left="408" top="15" width="66" height="24" color="#000000" fontSize="10">
+            <math optimize="2">
+              <input>
+                <e type="operand">φ</e>
+                <e type="operand">40</e>
+                <e type="operand" style="unit">°</e>
+                <e type="operator" args="2">*</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+        </regions>
+      </text>
+    </region>
+    <region left="0" top="45" width="748" height="38" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 1: Определяем склонение Солнца (δ) на 15 августа.<br />Склонение Солнца меняется в течение года.Для приближенных расчетов можно использовать формулу:</p>
+        </content>
+      </text>
+    </region>
+    <region left="396" top="90" width="175" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">360</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">284</e>
+          <e type="operand">227</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">365</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">504</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="99" width="215" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">δ</e>
+          <e type="operand">23.45</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">0.5878</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">13.78</e>
+        </result>
+      </math>
+    </region>
+    <region left="234" top="99" width="150" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">504</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.5878</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="126" width="320" height="43" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">δ</e>
+          <e type="operand">23.45</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">360</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">284</e>
+          <e type="operand">227</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">365</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">13.78</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="162" width="725" height="72" color="#000000" fontSize="10">
+      <text lang="rus" width="725" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 2: Находим часовой угол <br /><br />Мы знаем, что в 12 : 00 \[REGION[5029d12ea8b3471eb90c60e705974d1e]]\ так как наше время 9 : 00 \[REGION[e3753b38cd4c41ed8557ea9368bd598e]]\ "-" т.к 3 часа до полудня.</p>
+        </content>
+        <regions>
+          <region id="5029d12ea8b3471eb90c60e705974d1e" left="190" top="31" width="58" height="24" color="#000000" fontSize="10">
+            <math optimize="2">
+              <input>
+                <e type="operand">h</e>
+                <e type="operand">0</e>
+                <e type="operand" style="unit">°</e>
+                <e type="operator" args="2">*</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="e3753b38cd4c41ed8557ea9368bd598e" left="451" top="30" width="181" height="26" color="#000000" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">h</e>
+                <e type="operand">3</e>
+                <e type="operand">15</e>
+                <e type="operator" args="2">*</e>
+                <e type="operand" style="unit">°</e>
+                <e type="operator" args="2">*</e>
+                <e type="operand">1</e>
+                <e type="operator" args="1">-</e>
+                <e type="bracket">(</e>
+                <e type="operator" args="2">*</e>
+                <e type="operator" args="2">:</e>
+              </input>
+              <contract>
+                <e type="operand" style="unit">°</e>
+              </contract>
+              <result action="numeric">
+                <e type="operand">45</e>
+                <e type="operator" args="1">-</e>
+              </result>
+            </math>
+          </region>
+        </regions>
+      </text>
+    </region>
+    <region left="0" top="252" width="404" height="23" color="#000000" fontSize="10">
+      <text lang="rus" width="404" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 3: Находим высоту солнца α </p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="279" width="539" height="244" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">α</e>
+          <e type="function" args="1">sin</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operand">δ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operand">δ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">h</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">α</e>
+          <e type="function" args="2">solve</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">1037</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">942.8</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">677.2</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">582.8</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">317.2</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">222.8</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">42.78</e>
+          <e type="operand">137.2</e>
+          <e type="operand">402.8</e>
+          <e type="operand">497.2</e>
+          <e type="operand">762.8</e>
+          <e type="operand">857.2</e>
+          <e type="operand">1123</e>
+          <e type="operand">13</e>
+          <e type="operand">1</e>
+          <e type="function" args="15">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="549" width="90" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">α</e>
+          <e type="operand">42.78</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="576" width="170" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">42.78</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">38.91</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="612" width="299" height="262" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">z</e>
+          <e type="function" args="1">cos</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">z</e>
+          <e type="function" args="2">solve</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">1127</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">1033</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">767.2</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">672.8</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">407.2</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">312.8</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">47.22</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">47.22</e>
+          <e type="operand">312.8</e>
+          <e type="operand">407.2</e>
+          <e type="operand">672.8</e>
+          <e type="operand">767.2</e>
+          <e type="operand">1033</e>
+          <e type="operand">1127</e>
+          <e type="operand">14</e>
+          <e type="operand">1</e>
+          <e type="function" args="16">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="891" width="90" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">z</e>
+          <e type="operand">47.22</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="918" width="127" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">z</e>
+          <e type="function" args="1">cos</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">38.91</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1080" width="366" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 4: Необходимо определить азимут солнца Φ:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1116" width="432" height="49" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Φ</e>
+          <e type="operand">h</e>
+          <e type="function" args="1">sign</e>
+          <e type="operand">z</e>
+          <e type="function" args="1">cos</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">δ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">z</e>
+          <e type="function" args="1">sin</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">acos</e>
+          <e type="function" args="1">abs</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">69.35</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1179" width="729" height="31" color="#000000" fontSize="10">
+      <text lang="rus" width="729" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 5 Определяем продолжительность светового дня для этого расчитаем угол на закате \[REGION[36c10689ebb045759f7af8bafec35a19]]\</p>
+        </content>
+        <regions>
+          <region id="36c10689ebb045759f7af8bafec35a19" left="658" top="0" width="26" height="30" color="#000000" fontSize="10">
+            <math optimize="2">
+              <input>
+                <e type="operand">h.s</e>
+              </input>
+            </math>
+          </region>
+        </regions>
+      </text>
+    </region>
+    <region left="9" top="1224" width="413" height="226" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">h.s</e>
+          <e type="operand">h.s</e>
+          <e type="function" args="1">cos</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">tan</e>
+          <e type="operator" args="1">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">δ</e>
+          <e type="function" args="1">tan</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">h.s</e>
+          <e type="function" args="2">solve</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">978.1</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">821.9</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">618.1</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">461.9</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">258.1</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">101.9</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">101.9</e>
+          <e type="operand">258.1</e>
+          <e type="operand">461.9</e>
+          <e type="operand">618.1</e>
+          <e type="operand">821.9</e>
+          <e type="operand">978.1</e>
+          <e type="operand">12</e>
+          <e type="operand">1</e>
+          <e type="function" args="14">mat</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1476" width="97" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">h.s</e>
+          <e type="operand">101.9</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="1539" width="163" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">L</e>
+          <e type="operand">2</e>
+          <e type="operand">15</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">101.9</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">13.59</e>
+        </result>
+      </math>
+    </region>
+    <region left="162" top="1548" width="53" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>часов</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1593" width="272" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Переведем дробную часть в минуты:</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="1620" width="91" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">0.6</e>
+          <e type="operand">60</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">36</e>
+        </result>
+      </math>
+    </region>
+    <region left="99" top="1620" width="53" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>минут</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1647" width="506" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Следовательно продолжительность светового дня 13 часов 36 минут</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1692" width="733" height="53" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Задача 1.2<br />Для наклоненного под углом 45° к горизонту и повернутой на 12° к западу площадки определить угол падения солнечных лучей в 14:00 1 июня. Местоположение 40° с.ш. </p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1755" width="66" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">S</e>
+          <e type="operand">45</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="72" top="1755" width="66" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ψ</e>
+          <e type="operand">12</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="144" top="1755" width="66" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">φ</e>
+          <e type="operand">40</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="216" top="1755" width="46" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">τ</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="261" top="1755" width="62" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">152</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="1782" width="748" height="38" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 1: Определяем склонение Солнца (δ) на 15 августа.<br />Склонение Солнца меняется в течение года.Для приближенных расчетов можно использовать формулу:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1836" width="320" height="43" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">δ</e>
+          <e type="operand">23.45</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">360</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">284</e>
+          <e type="operand">152</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">365</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">22.04</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1872" width="725" height="72" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="rus" width="725" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 2: Находим часовой угол <br /><br />Мы знаем, что в 12 : 00 \[REGION[5029d12ea8b3471eb90c60e705974d1e]]\ так как наше время 14 : 00 \[REGION[e3753b38cd4c41ed8557ea9368bd598e]]\ "+" т.к 2 часа после полудня.</p>
+        </content>
+        <regions>
+          <region id="5029d12ea8b3471eb90c60e705974d1e" left="190" top="31" width="58" height="24" color="#000000" fontSize="10">
+            <math optimize="2">
+              <input>
+                <e type="operand">h</e>
+                <e type="operand">0</e>
+                <e type="operand" style="unit">°</e>
+                <e type="operator" args="2">*</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="e3753b38cd4c41ed8557ea9368bd598e" left="459" top="30" width="156" height="26" color="#000000" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">h</e>
+                <e type="operand">2</e>
+                <e type="operand">15</e>
+                <e type="operator" args="2">*</e>
+                <e type="operand" style="unit">°</e>
+                <e type="operator" args="2">*</e>
+                <e type="operand">1</e>
+                <e type="bracket">(</e>
+                <e type="operator" args="2">*</e>
+                <e type="operator" args="2">:</e>
+              </input>
+              <contract>
+                <e type="operand" style="unit">°</e>
+              </contract>
+              <result action="numeric">
+                <e type="operand">30</e>
+              </result>
+            </math>
+          </region>
+        </regions>
+      </text>
+    </region>
+    <region left="0" top="1953" width="147" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 3 Определим A</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1980" width="268" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">A</e>
+          <e type="operand">δ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">S</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.1706</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="2007" width="147" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 4 Определим B</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="2034" width="364" height="28" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">B</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="1">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">δ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">S</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">ψ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.1988</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="2061" width="147" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 5 Определим C</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="2097" width="326" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">C</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operand">δ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">h</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">S</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.4348</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="2151" width="147" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 6 Определим D</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="2178" width="384" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">D</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operand">δ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">S</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">h</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">ψ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.3569</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="2205" width="147" height="23" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 7 Определим E</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="2241" width="338" height="28" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">E</e>
+          <e type="operand">δ</e>
+          <e type="function" args="1">cos</e>
+          <e type="bracket">(</e>
+          <e type="operand">h</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">S</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.2107</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="2277" width="147" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Cascadia Code" fontSize="10">
+        <content>
+          <p>Шаг 8 Определим Θ</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="2313" width="217" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">θ</e>
+          <e type="operand">A</e>
+          <e type="operand">B</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">C</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">D</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">E</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.9741</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="2349" width="189" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">0.9741</e>
+          <e type="function" args="1">acos</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">°</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">13.07</e>
+        </result>
+      </math>
+    </region>
+  </regions>
+</worksheet>
