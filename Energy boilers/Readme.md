@@ -1,4 +1,4 @@
-This code automates calculation of steam boiler furnace, whcih uses gase as main fuel using Lipov`s guidelines.
+This code automates calculation of steam boiler furnace, which uses gase as main fuel using Lipov`s guidelines.
 How to use progrmam:
 1) 628 string of code - replace with your current D_p (tons/hour)
 2) 629 string of code - replace with your current Q_1 (MWatt)
